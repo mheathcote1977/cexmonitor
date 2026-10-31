@@ -71,6 +71,9 @@ export function inMonitoringWindow(now: Date): boolean {
   const hour = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: '2-digit', hourCycle: 'h23' }).format(now));
   return hour >= 8 && hour <= 20;
 }
+export function matchesM3Pro(p: Product): boolean {
+  return /\bMacBook\s+Pro\b.*\bM3\s+Pro\b/i.test(p.title);
+}
 export function parseState(raw: unknown): State {
   const s = object(raw);
   if (s.version !== 1 || s.query !== QUERY || !(s.checkedAt === null || (typeof s.checkedAt === 'string' && Number.isFinite(Date.parse(s.checkedAt)))) || !Array.isArray(s.pending)) throw new Error('Invalid state');

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { emptyState, reconcile, page, search, notify, message, parseState, inMonitoringWindow } from '../src/monitor.ts';
+import { emptyState, reconcile, page, search, notify, message, parseState, inMonitoringWindow, matchesM3Pro } from '../src/monitor.ts';
 import type { Product, Fetcher } from '../src/monitor.ts';
 import { spawnSync } from 'node:child_process';
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
@@ -14,6 +14,13 @@ const envelope = (ids: string[], total = ids.length, index = 1, size = 2): unkno
   results: ids.map(box_id => ({ box_id, title: p.title, price_sell: p.price, stock_online: 0, country: 'uk', currency: 'GBP' }))
 } });
 const response = (x: unknown): Response => new Response(JSON.stringify(x), { headers: { 'content-type': 'application/json' } });
+test('only M3 Pro MacBooks are selected for alerts', () => {
+  assert.equal(matchesM3Pro(p), true);
+  assert.equal(matchesM3Pro({ ...p, title: 'MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram' }), true);
+  assert.equal(matchesM3Pro({ ...p, title: 'MacBook Pro 15,9/M3 Max (16-CPU 40-GPU)' }), false);
+  assert.equal(matchesM3Pro({ ...p, title: 'MacBook Pro M3/8GB' }), false);
+  assert.equal(matchesM3Pro({ ...p, title: 'MacBook Pro M4 Pro' }), false);
+});
 test('baseline is silent; new IDs alert exactly once', () => {
   const base = reconcile(emptyState(), [p], '2026-10-31T12:00:00Z');
   assert.equal(base.pending.length, 0);

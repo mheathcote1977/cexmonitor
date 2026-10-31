@@ -1,6 +1,6 @@
 import { readFile, writeFile, rename } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
-import { emptyState, parseState, reconcile, search, notify, inMonitoringWindow } from './monitor.ts';
+import { emptyState, parseState, reconcile, search, notify, inMonitoringWindow, matchesM3Pro } from './monitor.ts';
 import type { State } from './monitor.ts';
 
 const file = 'data/state.json';
@@ -20,7 +20,8 @@ async function main(): Promise<void> {
   const mode = process.argv[2];
   if (mode === 'probe') {
     const products = await search(process.env.REEF_API_KEY ?? '');
-    console.log(JSON.stringify({ observedAt: new Date().toISOString(), products }, null, 2));
+    console.log(JSON.stringify({ observedAt: new Date().toISOString(), totalResults: products.length,
+      pages: Math.max(1, Math.ceil(products.length / 100)), products: products.filter(matchesM3Pro) }, null, 2));
     return;
   }
   if (mode !== 'monitor') throw new Error('Use probe or monitor');
@@ -40,7 +41,8 @@ async function main(): Promise<void> {
     }
   };
   await drain();
-  state = reconcile(state, await search(process.env.REEF_API_KEY ?? ''), new Date().toISOString());
+  const snapshot = await search(process.env.REEF_API_KEY ?? '');
+  state = reconcile(state, snapshot.filter(matchesM3Pro), new Date().toISOString());
   await save(state);
   await drain();
   console.log(`Snapshot saved: ${Object.keys(state.products).length} known IDs`);
