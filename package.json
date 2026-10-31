@@ -1,0 +1,13 @@
+{
+  "name": "cex-m3-pro-monitor",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --test test/*.test.ts",
+    "probe": "node src/main.ts probe",
+    "monitor": "node src/main.ts monitor"
+  },
+  "devDependencies": { "@types/node": "24.10.0", "typescript": "5.9.3" }
+}
