@@ -1,5 +1,8 @@
 name: CeX monitor
 on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/monitor.yml]
   schedule:
     - cron: '7 7-20 * * *'
   workflow_dispatch:
@@ -16,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   monitor:
-    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && (github.event_name == 'workflow_dispatch' || vars.MONITOR_ENABLED == 'true')
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && (github.event_name == 'workflow_dispatch' || vars.MONITOR_ENABLED != 'false')
     runs-on: ubuntu-latest
     timeout-minutes: 8
     permissions:
@@ -44,9 +47,9 @@ jobs:
           REEF_API_KEY: ${{ secrets.REEF_API_KEY }}
         run: npm run probe
       - name: Monitor
-        if: (github.event_name == 'schedule' || inputs.mode == 'monitor') && steps.hours.outputs.allowed == 'true'
+        if: (github.event_name == 'schedule' || github.event_name == 'push' || inputs.mode == 'monitor') && steps.hours.outputs.allowed == 'true'
         env:
-          MONITOR_ENABLED: ${{ vars.MONITOR_ENABLED }}
+          MONITOR_ENABLED: ${{ vars.MONITOR_ENABLED || 'true' }}
           REEF_API_KEY: ${{ secrets.REEF_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
