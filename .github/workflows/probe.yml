@@ -1,0 +1,26 @@
+name: Validate ReefAPI access
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/probe.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cex-monitor-state
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm run check && npm test
+      - name: Validate read-only ReefAPI search
+        env:
+          REEF_API_KEY: ${{ secrets.REEF_API_KEY }}
+        run: npm run probe
