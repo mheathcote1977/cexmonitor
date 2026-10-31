@@ -4,7 +4,7 @@ TypeScript monitor for `macbook pro m3 pro`, using ReefAPI, GitHub Actions, dura
 
 ## Schedule and credits
 
-Checks run at **09:07, 11:07, 13:07, 15:07, 17:07 and 19:07 Europe/London**, including weekends: six checks/day. The seven-minute offset avoids the busiest scheduling period. A UTC schedule covers GMT and BST; a tested London-time guard selects odd local hours and prevents overnight API calls. The first check is 9am, allowing an hour after stores open, and the last check is 7pm. Adding a seventh daily check would exceed the monthly credit budget. Manual monitoring respects the same slots; an explicitly requested read-only probe may run at any time. Workflow edits no longer trigger live checks.
+Checks run at **09:00, 11:00, 13:00, 15:00, 17:00 and 19:00 Europe/London**, including weekends: six checks/day. Checks are requested on the hour; GitHub can delay or drop scheduled runs, especially at busy times. A UTC schedule covers GMT and BST; a tested London-time guard selects odd local hours and prevents overnight API calls. The first check is 9am, allowing an hour after stores open, and the last check is 7pm. Adding a seventh daily check would exceed the monthly credit budget. Manual monitoring respects the same slots; an explicitly requested read-only probe may run at any time. Workflow edits no longer trigger live checks.
 
 ReefAPI charges 1 credit per successful CeX search page. We request 100 results per page and make no product-detail requests. The live probe on 31 October 2026 returned 448 rows across five pages, of which 149 matched M3 Pro. Search is now capped at **five pages per check**. A larger total causes an error after the first page instead of spending credits on more pages or accepting a partial snapshot.
 

@@ -100,14 +100,14 @@ test('disabled monitor and corrupt state fail without overwriting persisted data
 test('six two-hourly UK slots follow BST and reject even hours and overnight', () => {
   for (const month of ['01', '07']) {
     for (let utcHour = 0; utcHour < 24; utcHour++) {
-      const now = new Date(`2026-${month}-15T${String(utcHour).padStart(2, '0')}:07:00Z`);
+      const now = new Date(`2026-${month}-15T${String(utcHour).padStart(2, '0')}:00:00Z`);
       const localHour = (utcHour + (month === '07' ? 1 : 0)) % 24;
       assert.equal(inMonitoringWindow(now), localHour >= 9 && localHour <= 19 && localHour % 2 === 1);
     }
   }
   for (const date of ['2026-03-29', '2026-10-25']) {
-    assert.equal(inMonitoringWindow(new Date(`${date}T${date.includes('03-29') ? '08' : '09'}:07:00Z`)), true);
-    assert.equal(inMonitoringWindow(new Date(`${date}T21:07:00Z`)), false);
+    assert.equal(inMonitoringWindow(new Date(`${date}T${date.includes('03-29') ? '08' : '09'}:00:00Z`)), true);
+    assert.equal(inMonitoringWindow(new Date(`${date}T21:00:00Z`)), false);
   }
 });
 test('ReefAPI failures, wrong country and pagination caps abort', async () => {

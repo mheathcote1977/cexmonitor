@@ -17,7 +17,7 @@ async function setup(): Promise<void> {
   }
   const state = parseState(JSON.parse(await readFile('data/state.json', 'utf8')));
   if (state.checkedAt === null) throw new Error('No baseline saved');
-  await sendText(`CeX monitor connection test passed.\nBaseline saved: ${Object.keys(state.products).length} MacBook Pro M3 Pro product IDs.\nChecks are configured for 09:07, 11:07, 13:07, 15:07, 17:07 and 19:07 UK time.\nThis is a setup message, not a stock alert.`, token, chat);
+  await sendText(`CeX monitor connection test passed.\nBaseline saved: ${Object.keys(state.products).length} MacBook Pro M3 Pro product IDs.\nChecks are configured for 09:00, 11:00, 13:00, 15:00, 17:00 and 19:00 UK time.\nThis is a setup message, not a stock alert.`, token, chat);
   console.log('Telegram accepted setup message; repository baseline verified');
 }
 setup().catch((e: unknown) => { console.error(e instanceof Error ? e.message : 'Setup failed'); process.exitCode = 1; });
