@@ -42,7 +42,7 @@ export async function search(key: string, fetcher: Fetcher = fetch, size = 100):
   if (!Number.isInteger(size) || size < 1 || size > 100) throw new Error('Invalid page size');
   const found = new Map<string, Product>();
   let expected: number | undefined;
-  for (let index = 1; index * size <= 1000; index++) {
+  for (let index = 1; index <= 5; index++) {
     let response: Response;
     try {
       response = await fetcher(ENDPOINT, { method: 'POST', signal: AbortSignal.timeout(30000), redirect: 'error',
@@ -57,7 +57,7 @@ export async function search(key: string, fetcher: Fetcher = fetch, size = 100):
     if (p.page !== index || p.size !== size) throw new Error('Unexpected page or page size');
     if (expected !== undefined && p.total !== expected) throw new Error('Search changed during pagination; retry next run');
     expected = p.total;
-    if (p.products.length > size || expected > 1000) throw new Error('Pagination bounds exceeded; complete search unavailable');
+    if (p.products.length > size || expected > size * 5) throw new Error('Pagination bounds exceeded; five-page credit budget');
     for (const item of p.products) {
       if (found.has(item.id)) throw new Error('Repeated ID across pages; incomplete snapshot');
       found.set(item.id, item);
@@ -69,7 +69,7 @@ export async function search(key: string, fetcher: Fetcher = fetch, size = 100):
 }
 export function inMonitoringWindow(now: Date): boolean {
   const hour = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: '2-digit', hourCycle: 'h23' }).format(now));
-  return hour >= 8 && hour <= 20;
+  return hour >= 9 && hour <= 19 && hour % 2 === 1;
 }
 export function matchesM3Pro(p: Product): boolean {
   return /\bMacBook\s+Pro\b.*\bM3\s+Pro\b/i.test(p.title);

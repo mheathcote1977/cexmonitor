@@ -31,7 +31,7 @@ async function main(): Promise<void> {
   let state: State;
   try { state = parseState(JSON.parse(await readFile(file, 'utf8'))); }
   catch (e) { if ((e as NodeJS.ErrnoException).code === 'ENOENT') state = emptyState(); else throw e; }
-  if (!inMonitoringWindow(new Date())) { console.log('Outside 08:00–20:59 Europe/London; no API calls'); return; }
+  if (!inMonitoringWindow(new Date())) { console.log('Outside the six two-hourly UK check slots; no API calls'); return; }
   // Drain durable pending alerts before new observations. Persist each acknowledgement.
   const drain = async (): Promise<void> => {
     while (state.pending.length) {

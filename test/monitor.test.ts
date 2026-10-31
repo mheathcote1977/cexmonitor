@@ -97,16 +97,16 @@ test('disabled monitor and corrupt state fail without overwriting persisted data
   } finally { rmSync(dir, { recursive: true }); }
 });
 
-test('UK hours include 8am and 8pm, follow BST, and reject overnight', () => {
+test('six two-hourly UK slots follow BST and reject even hours and overnight', () => {
   for (const month of ['01', '07']) {
     for (let utcHour = 0; utcHour < 24; utcHour++) {
       const now = new Date(`2026-${month}-15T${String(utcHour).padStart(2, '0')}:07:00Z`);
       const localHour = (utcHour + (month === '07' ? 1 : 0)) % 24;
-      assert.equal(inMonitoringWindow(now), localHour >= 8 && localHour <= 20);
+      assert.equal(inMonitoringWindow(now), localHour >= 9 && localHour <= 19 && localHour % 2 === 1);
     }
   }
   for (const date of ['2026-03-29', '2026-10-25']) {
-    assert.equal(inMonitoringWindow(new Date(`${date}T08:07:00Z`)), true);
+    assert.equal(inMonitoringWindow(new Date(`${date}T${date.includes('03-29') ? '08' : '09'}:07:00Z`)), true);
     assert.equal(inMonitoringWindow(new Date(`${date}T21:07:00Z`)), false);
   }
 });
@@ -116,4 +116,13 @@ test('ReefAPI failures, wrong country and pagination caps abort', async () => {
   assert.throws(() => page(wrong), /scope/);
   await assert.rejects(search('fixture', async () => response(envelope(['a', 'b'], 1001)), 2), /bounds/);
   await assert.rejects(search('fixture', async () => { throw new Error('fixture'); }), (e: Error) => !e.message.includes('fixture'));
+});
+
+test('five-page credit ceiling stops before requesting page six', async () => {
+  let calls = 0;
+  await assert.rejects(search('fixture', async () => {
+    calls++;
+    return response(envelope(['a', 'b'], 11));
+  }, 2), /five-page credit budget/);
+  assert.equal(calls, 1);
 });

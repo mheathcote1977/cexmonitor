@@ -1,10 +1,7 @@
 name: CeX monitor
 on:
-  push:
-    branches: [main]
-    paths: [.github/workflows/monitor.yml]
   schedule:
-    - cron: '7 7-20 * * *'
+    - cron: '7 8-19 * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -47,7 +44,7 @@ jobs:
           REEF_API_KEY: ${{ secrets.REEF_API_KEY }}
         run: npm run probe
       - name: Monitor
-        if: (github.event_name == 'schedule' || github.event_name == 'push' || inputs.mode == 'monitor') && steps.hours.outputs.allowed == 'true'
+        if: (github.event_name == 'schedule' || inputs.mode == 'monitor') && steps.hours.outputs.allowed == 'true'
         env:
           MONITOR_ENABLED: ${{ vars.MONITOR_ENABLED || 'true' }}
           REEF_API_KEY: ${{ secrets.REEF_API_KEY }}
