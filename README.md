@@ -31,6 +31,10 @@ Delivery is at least once: a crash after Telegram accepts a message but before i
 
 The adapter validates success, UK/GBP scope, query, page numbers, counts, total consistency and duplicate IDs. It aborts on partial or inconsistent pagination, HTTP errors, non-JSON, invalid fields, or ReefAPI's five-page credit ceiling (500 results at the configured page size). It requests no availability filter so zero-stock products can be observed. Sorting uses the documented `name_asc` option. Pagination is not an atomic source snapshot; equal-title ordering and concurrent catalogue changes still require live validation. API errors never produce a new observation or an empty-catalogue notification. No automatic HTTP retries consume extra credits.
 
+## Test Telegram stock alerts without credits
+
+Manually run **Test stock alerts without credits** from Actions. It feeds synthetic snapshots through the production change detector, checks new-ID and zero-to-positive restock events plus duplicate suppression, then uses the production formatter and Telegram transport to send two messages prominently labelled TEST ONLY. Synthetic product links are omitted. It never reads or changes repository product state and has no ReefAPI secret or API calls. This verifies alert handling and delivery, not the accuracy of live source stock.
+
 ## Local verification
 
 Use Node 24:
