@@ -1,0 +1,27 @@
+name: Test stock alerts without credits
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/alert-test.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cex-alert-test
+  cancel-in-progress: false
+jobs:
+  test-alerts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm run check && npm test
+      - name: Simulate new-ID and restock alerts using in-memory fixtures
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node src/alert-test.ts
