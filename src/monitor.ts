@@ -107,9 +107,12 @@ export function message(alert: Alert): string {
   return `${alert.kind === 'new' ? 'New CeX product' : 'CeX returned to online stock'}\n${p.title.slice(0, 500)}\n${p.price === null ? 'Price unavailable' : `£${p.price.toFixed(2)}`}\nOnline stock: ${p.online === null ? 'unavailable (unknown)' : p.online}\nhttps://uk.webuy.com/product-detail?id=${encodeURIComponent(p.id)}\nObserved ${alert.key.split(':new:')[0]?.split(':restock:')[0]}`;
 }
 export async function notify(alert: Alert, token: string, chat: string, fetcher: Fetcher = fetch): Promise<void> {
+  return sendText(message(alert), token, chat, fetcher);
+}
+export async function sendText(text: string, token: string, chat: string, fetcher: Fetcher = fetch): Promise<void> {
   let r: Response;
   try {
-    r = await fetcher(`https://api.telegram.org/bot${token}/sendMessage`, { method: 'POST', redirect: 'error', signal: AbortSignal.timeout(20000), headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chat, text: message(alert), link_preview_options: { is_disabled: true } }) });
+    r = await fetcher(`https://api.telegram.org/bot${token}/sendMessage`, { method: 'POST', redirect: 'error', signal: AbortSignal.timeout(20000), headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chat, text, link_preview_options: { is_disabled: true } }) });
   } catch { throw new Error('Telegram transport failure (delivery may be ambiguous)'); }
   if (!r.ok) throw new Error(`Telegram HTTP ${r.status}`);
   if (object(await r.json()).ok !== true) throw new Error('Telegram rejected message');

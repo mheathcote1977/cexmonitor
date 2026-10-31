@@ -1,0 +1,34 @@
+name: Verify monitor setup
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/setup.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: cex-monitor-state
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci --ignore-scripts
+      - run: npm run check && npm test
+      - name: Configure state commits
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Save silent baseline and test Telegram delivery
+        env:
+          REEF_API_KEY: ${{ secrets.REEF_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node src/setup.ts
