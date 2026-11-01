@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { emptyState, reconcile, page, search, notify, message, parseState, inMonitoringWindow, matchesM3Pro } from '../src/monitor.ts';
+import { emptyState, reconcile, page, search, notify, message, parseState, inMonitoringWindow, isCheckDue, monitoringSlot, matchesM3Pro } from '../src/monitor.ts';
 import type { Product, Fetcher } from '../src/monitor.ts';
 import { spawnSync } from 'node:child_process';
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
@@ -97,12 +97,12 @@ test('disabled monitor and corrupt state fail without overwriting persisted data
   } finally { rmSync(dir, { recursive: true }); }
 });
 
-test('six two-hourly UK slots follow BST and reject even hours and overnight', () => {
+test('UK monitoring window accepts delayed daytime runs and follows BST', () => {
   for (const month of ['01', '07']) {
     for (let utcHour = 0; utcHour < 24; utcHour++) {
       const now = new Date(`2026-${month}-15T${String(utcHour).padStart(2, '0')}:00:00Z`);
       const localHour = (utcHour + (month === '07' ? 1 : 0)) % 24;
-      assert.equal(inMonitoringWindow(now), localHour >= 9 && localHour <= 19 && localHour % 2 === 1);
+      assert.equal(inMonitoringWindow(now), localHour >= 9 && localHour <= 19);
     }
   }
   for (const date of ['2026-03-29', '2026-10-25']) {
@@ -125,4 +125,17 @@ test('five-page credit ceiling stops before requesting page six', async () => {
     return response(envelope(['a', 'b'], 11));
   }, 2), /five-page credit budget/);
   assert.equal(calls, 1);
+});
+
+test('delayed checks are allowed once per local two-hour slot, including DST', () => {
+  assert.equal(isCheckDue(new Date('2026-11-01T10:30:00Z'), null), true);
+  assert.equal(isCheckDue(new Date('2026-11-01T10:30:00Z'), '2026-11-01T09:53:00Z'), false);
+  assert.equal(isCheckDue(new Date('2026-11-01T11:05:00Z'), '2026-11-01T10:30:00Z'), true);
+  assert.equal(isCheckDue(new Date('2026-11-01T20:05:00Z'), null), false);
+  assert.equal(isCheckDue(new Date('2026-11-02T09:05:00Z'), '2026-11-01T09:05:00Z'), true);
+  assert.equal(monitoringSlot(new Date('2026-07-01T08:05:00Z')), '2026-07-01:0');
+  assert.equal(monitoringSlot(new Date('2026-07-01T09:55:00Z')), '2026-07-01:0');
+  const reserved = { ...emptyState(), lastAttemptAt: '2026-11-01T09:01:00Z' };
+  assert.equal(parseState(reserved).lastAttemptAt, reserved.lastAttemptAt);
+  assert.throws(() => parseState({ ...emptyState(), lastAttemptAt: 'broken' }), /timestamp/);
 });

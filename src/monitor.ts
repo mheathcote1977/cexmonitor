@@ -4,7 +4,7 @@ export type Product = { id: string; title: string; price: number | null; online:
 export type Entry = Product & { lastKnownOnline: number | null };
 export type Alert = { key: string; kind: 'new' | 'restock'; product: Product };
 export type State = { version: 1; query: string; checkedAt: string | null;
-  products: Record<string, Entry>; pending: Alert[] };
+  products: Record<string, Entry>; pending: Alert[]; lastAttemptAt?: string };
 export const emptyState = (): State => ({ version: 1, query: QUERY, checkedAt: null, products: {}, pending: [] });
 export function object(x: unknown): Record<string, unknown> {
   if (!x || typeof x !== 'object' || Array.isArray(x)) throw new Error('Expected object');
@@ -69,7 +69,18 @@ export async function search(key: string, fetcher: Fetcher = fetch, size = 100):
 }
 export function inMonitoringWindow(now: Date): boolean {
   const hour = Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: '2-digit', hourCycle: 'h23' }).format(now));
-  return hour >= 9 && hour <= 19 && hour % 2 === 1;
+  return hour >= 9 && hour <= 19;
+}
+export function monitoringSlot(now: Date): string | null {
+  if (!inMonitoringWindow(now)) return null;
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', year: 'numeric',
+    month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23' }).formatToParts(now);
+  const values = Object.fromEntries(parts.map(p => [p.type, p.value]));
+  return `${values.year}-${values.month}-${values.day}:${Math.floor((Number(values.hour) - 9) / 2)}`;
+}
+export function isCheckDue(now: Date, lastAttemptAt: string | null): boolean {
+  const slot = monitoringSlot(now);
+  return slot !== null && (lastAttemptAt === null || monitoringSlot(new Date(lastAttemptAt)) !== slot);
 }
 export function matchesM3Pro(p: Product): boolean {
   return /\bMacBook\s+Pro\b.*\bM3\s+Pro\b/i.test(p.title);
@@ -78,6 +89,7 @@ export function parseState(raw: unknown): State {
   const s = object(raw);
   if (s.version !== 1 || s.query !== QUERY || !(s.checkedAt === null || (typeof s.checkedAt === 'string' && Number.isFinite(Date.parse(s.checkedAt)))) || !Array.isArray(s.pending)) throw new Error('Invalid state');
   const entries = object(s.products);
+  if (s.lastAttemptAt !== undefined && (typeof s.lastAttemptAt !== 'string' || !Number.isFinite(Date.parse(s.lastAttemptAt)))) throw new Error('Invalid attempt timestamp');
   for (const [id, value] of Object.entries(entries)) {
     const e = object(value);
     product({ boxId: e.id, boxName: e.title, sellPrice: e.price, ecomQuantityOnHand: e.online });

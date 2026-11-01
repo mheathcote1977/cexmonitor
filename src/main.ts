@@ -1,6 +1,6 @@
 import { readFile, writeFile, rename } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
-import { emptyState, parseState, reconcile, search, notify, inMonitoringWindow, matchesM3Pro } from './monitor.ts';
+import { emptyState, parseState, reconcile, search, notify, isCheckDue, matchesM3Pro } from './monitor.ts';
 import type { State } from './monitor.ts';
 
 const file = 'data/state.json';
@@ -31,7 +31,9 @@ async function main(): Promise<void> {
   let state: State;
   try { state = parseState(JSON.parse(await readFile(file, 'utf8'))); }
   catch (e) { if ((e as NodeJS.ErrnoException).code === 'ENOENT') state = emptyState(); else throw e; }
-  if (!inMonitoringWindow(new Date())) { console.log('Outside the six two-hourly UK check slots; no API calls'); return; }
+  if (!isCheckDue(new Date(), state.lastAttemptAt ?? state.checkedAt)) {
+    console.log('Outside UK monitoring hours or this two-hour slot already attempted; no API calls'); return;
+  }
   // Drain durable pending alerts before new observations. Persist each acknowledgement.
   const drain = async (): Promise<void> => {
     while (state.pending.length) {
@@ -41,6 +43,9 @@ async function main(): Promise<void> {
     }
   };
   await drain();
+  // Reserve the slot durably before spending credits, including if the search fails.
+  state.lastAttemptAt = new Date().toISOString();
+  await save(state);
   const snapshot = await search(process.env.REEF_API_KEY ?? '');
   state = reconcile(state, snapshot.filter(matchesM3Pro), new Date().toISOString());
   await save(state);

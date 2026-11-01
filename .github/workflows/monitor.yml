@@ -3,9 +3,6 @@ on:
   schedule:
     - cron: '0 9,11,13,15,17,19 * * *'
       timezone: Europe/London
-    # Temporary credit-free scheduler diagnostic; removed after verification.
-    - cron: '25 17 31 10 *'
-      timezone: Europe/London
   workflow_dispatch:
     inputs:
       mode:
@@ -19,17 +16,6 @@ concurrency:
   group: cex-monitor-state
   cancel-in-progress: false
 jobs:
-  scheduler-diagnostic:
-    if: github.event_name == 'schedule' && github.event.schedule == '25 17 31 10 *'
-    runs-on: ubuntu-24.04
-    permissions:
-      contents: read
-    steps:
-      - name: Confirm automatic scheduling without secrets or API calls
-        run: |
-          echo 'Automatic GitHub schedule event received. No ReefAPI calls or Telegram messages.'
-          date -u
-          echo 'Automatic schedule trigger confirmed; zero ReefAPI credits used.' >> "$GITHUB_STEP_SUMMARY"
   monitor:
     if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && (github.event_name == 'workflow_dispatch' || vars.MONITOR_ENABLED != 'false') && (github.event_name != 'schedule' || github.event.schedule == '0 9,11,13,15,17,19 * * *')
     runs-on: ubuntu-24.04
@@ -66,3 +52,14 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: npm run monitor
+      - name: Last completed check and attempt
+        if: always()
+        env:
+          RUN_RESULT: ${{ job.status }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync, appendFileSync } from 'node:fs';
+          const state = JSON.parse(readFileSync('data/state.json', 'utf8'));
+          const summary = `### CeX monitor status\nRun result: ${process.env.RUN_RESULT}\n\nLast complete snapshot (UTC): ${state.checkedAt ?? 'none'}\n\nLast reserved attempt (UTC): ${state.lastAttemptAt ?? state.checkedAt ?? 'none'}\n\nKnown M3 Pro IDs: ${Object.keys(state.products).length}\n\nA green run can skip API calls outside 09:00–19:59 UK time or if its two-hour slot was already attempted.\n`;
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
+          NODE
