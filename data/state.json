@@ -1,7 +1,7 @@
 {
   "version": 1,
   "query": "macbook pro m3 pro",
-  "checkedAt": "2026-11-03T16:53:48.088Z",
+  "checkedAt": "2026-11-04T16:57:02.764Z",
   "products": {
     "SMBP156P1114181SC": {
       "id": "SMBP156P1114181SC",
@@ -854,8 +854,8 @@
       "id": "SMBPM157P121818512BB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/SB/B",
       "price": 1355,
-      "online": 5,
-      "lastKnownOnline": 5
+      "online": 4,
+      "lastKnownOnline": 4
     },
     "SMBPM157P121818512BA": {
       "id": "SMBPM157P121818512BA",
