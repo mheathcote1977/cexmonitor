@@ -1047,17 +1047,6 @@
       "lastKnownOnline": 0
     }
   },
-  "pending": [
-    {
-      "key": "2026-11-09T19:37:32.913Z:restock:SMBP156P111418512SB",
-      "kind": "restock",
-      "product": {
-        "id": "SMBP156P111418512SB",
-        "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/Silver/B",
-        "price": 1100,
-        "online": 1
-      }
-    }
-  ],
+  "pending": [],
   "lastAttemptAt": "2026-11-09T19:37:25.832Z"
 }
