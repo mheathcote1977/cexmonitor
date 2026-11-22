@@ -1054,17 +1054,6 @@
       "lastKnownOnline": 1
     }
   },
-  "pending": [
-    {
-      "key": "2026-11-22T16:58:04.528Z:restock:SMBP156P111418512BAC",
-      "kind": "restock",
-      "product": {
-        "id": "SMBP156P111418512BAC",
-        "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/SB/C (Arab)",
-        "price": 750,
-        "online": 1
-      }
-    }
-  ],
+  "pending": [],
   "lastAttemptAt": "2026-11-22T16:57:58.655Z"
 }
