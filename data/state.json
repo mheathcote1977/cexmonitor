@@ -1,152 +1,152 @@
 {
   "version": 1,
   "query": "macbook pro m3 pro",
-  "checkedAt": "2026-11-22T16:58:04.528Z",
+  "checkedAt": "2026-11-25T19:01:42.235Z",
   "products": {
     "SMBP156P1114181SC": {
       "id": "SMBP156P1114181SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/1TB SSD/14\"/Silver/C",
-      "price": 1140,
+      "price": 1185,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114181SB": {
       "id": "SMBP156P1114181SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/1TB SSD/14\"/Silver/B",
-      "price": 1285,
+      "price": 1335,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114181SA": {
       "id": "SMBP156P1114181SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/1TB SSD/14\"/Silver/A",
-      "price": 1435,
+      "price": 1490,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114181BC": {
       "id": "SMBP156P1114181BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/1TB SSD/14\"/SB/C",
-      "price": 1015,
+      "price": 1055,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114181BB": {
       "id": "SMBP156P1114181BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/1TB SSD/14\"/SB/B",
-      "price": 1050,
+      "price": 1090,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114181BA": {
       "id": "SMBP156P1114181BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/1TB SSD/14\"/SB/A",
-      "price": 1195,
+      "price": 1245,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114182SC": {
       "id": "SMBP156P1114182SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/2TB SSD/14\"/Silver/C",
-      "price": 1585,
+      "price": 1635,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114182SB": {
       "id": "SMBP156P1114182SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/2TB SSD/14\"/Silver/B",
-      "price": 1775,
+      "price": 1830,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114182SA": {
       "id": "SMBP156P1114182SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/2TB SSD/14\"/Silver/A",
-      "price": 1950,
+      "price": 2010,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114182BC": {
       "id": "SMBP156P1114182BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/2TB SSD/14\"/SB/C",
-      "price": 1585,
+      "price": 1635,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114182BB": {
       "id": "SMBP156P1114182BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/2TB SSD/14\"/SB/B",
-      "price": 1775,
+      "price": 1830,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114182BA": {
       "id": "SMBP156P1114182BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/2TB SSD/14\"/SB/A",
-      "price": 1950,
+      "price": 2010,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114184SC": {
       "id": "SMBP156P1114184SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/4TB SSD/14\"/Silver/C",
-      "price": 1800,
+      "price": 1870,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114184SB": {
       "id": "SMBP156P1114184SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/4TB SSD/14\"/Silver/B",
-      "price": 1960,
+      "price": 2040,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114184SA": {
       "id": "SMBP156P1114184SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/4TB SSD/14\"/Silver/A",
-      "price": 2125,
+      "price": 2210,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114184BC": {
       "id": "SMBP156P1114184BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/4TB SSD/14\"/SB/C",
-      "price": 1800,
+      "price": 1870,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114184BB": {
       "id": "SMBP156P1114184BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/4TB SSD/14\"/SB/B",
-      "price": 1960,
+      "price": 2040,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114184BA": {
       "id": "SMBP156P1114184BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/4TB SSD/14\"/SB/A",
-      "price": 2125,
+      "price": 2210,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111418512SC": {
       "id": "SMBP156P111418512SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/Silver/C",
-      "price": 985,
+      "price": 1005,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111418512SB": {
       "id": "SMBP156P111418512SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/Silver/B",
-      "price": 1100,
+      "price": 1120,
       "online": 2,
       "lastKnownOnline": 2
     },
     "SMBP156P111418512SA": {
       "id": "SMBP156P111418512SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/Silver/A",
-      "price": 1210,
+      "price": 1235,
       "online": 0,
       "lastKnownOnline": 0
     },
@@ -167,196 +167,196 @@
     "SMBP156P111418512BC": {
       "id": "SMBP156P111418512BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/SB/C",
-      "price": 880,
+      "price": 915,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111418512BB": {
       "id": "SMBP156P111418512BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/SB/B",
-      "price": 960,
+      "price": 1000,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111418512BA": {
       "id": "SMBP156P111418512BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/SB/A",
-      "price": 1095,
+      "price": 1140,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P11141851223C": {
       "id": "SMBP156P11141851223C",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/SB/C (TurQ)",
-      "price": 1105,
+      "price": 1140,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114361SC": {
       "id": "SMBP156P1114361SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/1TB SSD/14\"/Silver/C",
-      "price": 1535,
+      "price": 1580,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114361SB": {
       "id": "SMBP156P1114361SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/1TB SSD/14\"/Silver/B",
-      "price": 1710,
+      "price": 1760,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114361SA": {
       "id": "SMBP156P1114361SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/1TB SSD/14\"/Silver/A",
-      "price": 1895,
+      "price": 1950,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114361BC": {
       "id": "SMBP156P1114361BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/1TB SSD/14\"/SB/C",
-      "price": 1535,
+      "price": 1580,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114361BB": {
       "id": "SMBP156P1114361BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/1TB SSD/14\"/SB/B",
-      "price": 1710,
+      "price": 1760,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114361BA": {
       "id": "SMBP156P1114361BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/1TB SSD/14\"/SB/A",
-      "price": 1895,
+      "price": 1950,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114362SC": {
       "id": "SMBP156P1114362SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/2TB SSD/14\"/Silver/C",
-      "price": 1880,
+      "price": 1935,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114362SB": {
       "id": "SMBP156P1114362SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/2TB SSD/14\"/Silver/B",
-      "price": 2070,
+      "price": 2130,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114362SA": {
       "id": "SMBP156P1114362SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/2TB SSD/14\"/Silver/A",
-      "price": 2255,
+      "price": 2325,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114362BC": {
       "id": "SMBP156P1114362BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/2TB SSD/14\"/SB/C",
-      "price": 1880,
+      "price": 1935,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114362BB": {
       "id": "SMBP156P1114362BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/2TB SSD/14\"/SB/B",
-      "price": 2070,
+      "price": 2130,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114362BA": {
       "id": "SMBP156P1114362BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/2TB SSD/14\"/SB/A",
-      "price": 2255,
+      "price": 2325,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114364SC": {
       "id": "SMBP156P1114364SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/4TB SSD/14\"/Silver/C",
-      "price": 2255,
+      "price": 2325,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114364SB": {
       "id": "SMBP156P1114364SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/4TB SSD/14\"/Silver/B",
-      "price": 2450,
+      "price": 2525,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114364SA": {
       "id": "SMBP156P1114364SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/4TB SSD/14\"/Silver/A",
-      "price": 2625,
+      "price": 2705,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114364BC": {
       "id": "SMBP156P1114364BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/4TB SSD/14\"/SB/C",
-      "price": 2255,
+      "price": 2325,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114364BB": {
       "id": "SMBP156P1114364BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/4TB SSD/14\"/SB/B",
-      "price": 2450,
+      "price": 2525,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P1114364BA": {
       "id": "SMBP156P1114364BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/4TB SSD/14\"/SB/A",
-      "price": 2625,
+      "price": 2705,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111436512SC": {
       "id": "SMBP156P111436512SC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/512GB SSD/14\"/Silver/C",
-      "price": 1400,
+      "price": 1440,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111436512SB": {
       "id": "SMBP156P111436512SB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/512GB SSD/14\"/Silver/B",
-      "price": 1565,
+      "price": 1610,
       "online": 1,
       "lastKnownOnline": 1
     },
     "SMBP156P111436512SA": {
       "id": "SMBP156P111436512SA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/512GB SSD/14\"/Silver/A",
-      "price": 1730,
+      "price": 1780,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111436512BC": {
       "id": "SMBP156P111436512BC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/512GB SSD/14\"/SB/C",
-      "price": 1400,
+      "price": 1440,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111436512BB": {
       "id": "SMBP156P111436512BB",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/512GB SSD/14\"/SB/B",
-      "price": 1565,
+      "price": 1610,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111436512BA": {
       "id": "SMBP156P111436512BA",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/36GB Ram/512GB SSD/14\"/SB/A",
-      "price": 1730,
+      "price": 1780,
       "online": 0,
       "lastKnownOnline": 0
     },
@@ -371,8 +371,8 @@
       "id": "SMBP158P1218181SB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/18GB Ram/1TB SSD/14\"/Silver/B",
       "price": 1360,
-      "online": 1,
-      "lastKnownOnline": 1
+      "online": 2,
+      "lastKnownOnline": 2
     },
     "SMBP158P1218181SA": {
       "id": "SMBP158P1218181SA",
@@ -391,16 +391,16 @@
     "SMBP158P1218181BB": {
       "id": "SMBP158P1218181BB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/18GB Ram/1TB SSD/14\"/SB/B",
-      "price": 1305,
-      "online": 2,
-      "lastKnownOnline": 2
+      "price": 1345,
+      "online": 1,
+      "lastKnownOnline": 1
     },
     "SMBP158P1218181BA": {
       "id": "SMBP158P1218181BA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/18GB Ram/1TB SSD/14\"/SB/A",
       "price": 1385,
-      "online": 1,
-      "lastKnownOnline": 1
+      "online": 2,
+      "lastKnownOnline": 2
     },
     "SMBP158P1218182SC": {
       "id": "SMBP158P1218182SC",
@@ -531,168 +531,168 @@
     "SMBP158P1218361SC": {
       "id": "SMBP158P1218361SC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/14\"/Silver/C",
-      "price": 965,
+      "price": 1005,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218361SB": {
       "id": "SMBP158P1218361SB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/14\"/Silver/B",
-      "price": 1045,
+      "price": 1085,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218361SA": {
       "id": "SMBP158P1218361SA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/14\"/Silver/A",
-      "price": 1120,
+      "price": 1165,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218361BC": {
       "id": "SMBP158P1218361BC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/14\"/SB/C",
-      "price": 965,
+      "price": 1005,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218361BB": {
       "id": "SMBP158P1218361BB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/14\"/SB/B",
-      "price": 1045,
+      "price": 1085,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218361BA": {
       "id": "SMBP158P1218361BA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/14\"/SB/A",
-      "price": 1120,
+      "price": 1165,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218362SC": {
       "id": "SMBP158P1218362SC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/14\"/Silver/C",
-      "price": 1065,
+      "price": 1110,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218362SB": {
       "id": "SMBP158P1218362SB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/14\"/Silver/B",
-      "price": 1155,
+      "price": 1200,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218362SA": {
       "id": "SMBP158P1218362SA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/14\"/Silver/A",
-      "price": 1240,
+      "price": 1290,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218362BC": {
       "id": "SMBP158P1218362BC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/14\"/SB/C",
-      "price": 1065,
+      "price": 1110,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218362BB": {
       "id": "SMBP158P1218362BB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/14\"/SB/B",
-      "price": 1155,
+      "price": 1200,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218362BA": {
       "id": "SMBP158P1218362BA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/14\"/SB/A",
-      "price": 1240,
+      "price": 1290,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218364SC": {
       "id": "SMBP158P1218364SC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/14\"/Silver/C",
-      "price": 1200,
+      "price": 1250,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218364SB": {
       "id": "SMBP158P1218364SB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/14\"/Silver/B",
-      "price": 1335,
+      "price": 1390,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218364SA": {
       "id": "SMBP158P1218364SA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/14\"/Silver/A",
-      "price": 1460,
+      "price": 1520,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218364BC": {
       "id": "SMBP158P1218364BC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/14\"/SB/C",
-      "price": 1200,
+      "price": 1250,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218364BB": {
       "id": "SMBP158P1218364BB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/14\"/SB/B",
-      "price": 1335,
+      "price": 1390,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P1218364BA": {
       "id": "SMBP158P1218364BA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/14\"/SB/A",
-      "price": 1460,
+      "price": 1520,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P121836512SC": {
       "id": "SMBP158P121836512SC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/14\"/Silver/C",
-      "price": 915,
+      "price": 950,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P121836512SB": {
       "id": "SMBP158P121836512SB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/14\"/Silver/B",
-      "price": 1045,
+      "price": 1085,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P121836512SA": {
       "id": "SMBP158P121836512SA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/14\"/Silver/A",
-      "price": 1070,
+      "price": 1115,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P121836512BC": {
       "id": "SMBP158P121836512BC",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/14\"/SB/C",
-      "price": 965,
+      "price": 1005,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P121836512BB": {
       "id": "SMBP158P121836512BB",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/14\"/SB/B",
-      "price": 1045,
+      "price": 1085,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP158P121836512BA": {
       "id": "SMBP158P121836512BA",
       "title": "MacBook Pro 15,6/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/14\"/SB/A",
-      "price": 1125,
+      "price": 1105,
       "online": 0,
       "lastKnownOnline": 0
     },
@@ -825,21 +825,21 @@
     "SMBPM157P121818512SC": {
       "id": "SMBPM157P121818512SC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/Silver/C",
-      "price": 1195,
+      "price": 1245,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121818512SB": {
       "id": "SMBPM157P121818512SB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/Silver/B",
-      "price": 1280,
-      "online": 0,
-      "lastKnownOnline": 0
+      "price": 1330,
+      "online": 1,
+      "lastKnownOnline": 1
     },
     "SMBPM157P121818512SA": {
       "id": "SMBPM157P121818512SA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/Silver/A",
-      "price": 1415,
+      "price": 1470,
       "online": 0,
       "lastKnownOnline": 0
     },
@@ -860,200 +860,228 @@
     "SMBPM157P121818512BA": {
       "id": "SMBPM157P121818512BA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/SB/A",
-      "price": 1505,
-      "online": 1,
-      "lastKnownOnline": 1
+      "price": 1565,
+      "online": 0,
+      "lastKnownOnline": 0
     },
     "SMBPM157P1218361SC": {
       "id": "SMBPM157P1218361SC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/16\"/Silver/C",
-      "price": 1455,
+      "price": 1515,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218361SB": {
       "id": "SMBPM157P1218361SB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/16\"/Silver/B",
-      "price": 1595,
+      "price": 1660,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218361SA": {
       "id": "SMBPM157P1218361SA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/16\"/Silver/A",
-      "price": 1735,
+      "price": 1805,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218361BC": {
       "id": "SMBPM157P1218361BC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/16\"/SB/C",
-      "price": 1510,
+      "price": 1570,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218361BB": {
       "id": "SMBPM157P1218361BB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/16\"/SB/B",
-      "price": 1660,
+      "price": 1725,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218361BA": {
       "id": "SMBPM157P1218361BA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/1TB SSD/16\"/SB/A",
-      "price": 1800,
+      "price": 1870,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218362SC": {
       "id": "SMBPM157P1218362SC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/16\"/Silver/C",
-      "price": 1785,
+      "price": 1855,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218362SB": {
       "id": "SMBPM157P1218362SB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/16\"/Silver/B",
-      "price": 2105,
+      "price": 2190,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218362SA": {
       "id": "SMBPM157P1218362SA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/16\"/Silver/A",
-      "price": 2275,
+      "price": 2365,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218362BC": {
       "id": "SMBPM157P1218362BC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/16\"/SB/C",
-      "price": 1785,
+      "price": 1855,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218362BB": {
       "id": "SMBPM157P1218362BB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/16\"/SB/B",
-      "price": 2105,
+      "price": 2190,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218362BA": {
       "id": "SMBPM157P1218362BA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/2TB SSD/16\"/SB/A",
-      "price": 2275,
+      "price": 2365,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218364SC": {
       "id": "SMBPM157P1218364SC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/16\"/Silver/C",
-      "price": 2275,
+      "price": 2365,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218364SB": {
       "id": "SMBPM157P1218364SB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/16\"/Silver/B",
-      "price": 2425,
+      "price": 2520,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218364SA": {
       "id": "SMBPM157P1218364SA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/16\"/Silver/A",
-      "price": 2595,
+      "price": 2700,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218364BC": {
       "id": "SMBPM157P1218364BC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/16\"/SB/C",
-      "price": 2275,
+      "price": 2365,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218364BB": {
       "id": "SMBPM157P1218364BB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/16\"/SB/B",
-      "price": 2425,
+      "price": 2520,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P1218364BA": {
       "id": "SMBPM157P1218364BA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/4TB SSD/16\"/SB/A",
-      "price": 2595,
+      "price": 2700,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P12183651QBC": {
       "id": "SMBPM157P12183651QBC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/16\"/SB/C (QZ)",
-      "price": 1260,
+      "price": 1310,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121836512SC": {
       "id": "SMBPM157P121836512SC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/16\"/Silver/C",
-      "price": 1315,
+      "price": 1370,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121836512SB": {
       "id": "SMBPM157P121836512SB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/16\"/Silver/B",
-      "price": 1445,
+      "price": 1505,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121836512SA": {
       "id": "SMBPM157P121836512SA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/16\"/Silver/A",
-      "price": 1570,
+      "price": 1635,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121836512BC": {
       "id": "SMBPM157P121836512BC",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/16\"/SB/C",
-      "price": 1410,
+      "price": 1465,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121836512BB": {
       "id": "SMBPM157P121836512BB",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/16\"/SB/B",
-      "price": 1550,
+      "price": 1610,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121836512BA": {
       "id": "SMBPM157P121836512BA",
       "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/36GB Ram/512GB SSD/16\"/SB/A",
-      "price": 1680,
+      "price": 1745,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBPM157P121818512AC": {
       "id": "SMBPM157P121818512AC",
       "title": "MacBook Pro 15,7/M3 Pro(12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/Silver/C(AZ)",
-      "price": 1325,
+      "price": 1365,
       "online": 0,
       "lastKnownOnline": 0
     },
     "SMBP156P111418512BAC": {
       "id": "SMBP156P111418512BAC",
       "title": "MacBook Pro 15,6/M3 Pro (11-CPU 14-GPU)/18GB Ram/512GB SSD/14\"/SB/C (Arab)",
-      "price": 750,
+      "price": 775,
+      "online": 1,
+      "lastKnownOnline": 1
+    },
+    "SMBPM157P121818512RC": {
+      "id": "SMBPM157P121818512RC",
+      "title": "MacBook Pro 15,7/M3 Pro(12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/SB/C(Arabic)",
+      "price": 1050,
       "online": 1,
       "lastKnownOnline": 1
     }
   },
-  "pending": [],
+  "pending": [
+    {
+      "key": "2026-11-25T19:01:42.235Z:restock:SMBPM157P121818512SB",
+      "kind": "restock",
+      "product": {
+        "id": "SMBPM157P121818512SB",
+        "title": "MacBook Pro 15,7/M3 Pro (12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/Silver/B",
+        "price": 1330,
+        "online": 1
+      }
+    },
+    {
+      "key": "2026-11-25T19:01:42.235Z:new:SMBPM157P121818512RC",
+      "kind": "new",
+      "product": {
+        "id": "SMBPM157P121818512RC",
+        "title": "MacBook Pro 15,7/M3 Pro(12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/SB/C(Arabic)",
+        "price": 1050,
+        "online": 1
+      }
+    }
+  ],
   "lastAttemptAt": "2026-11-25T19:01:34.526Z"
 }
