@@ -1061,17 +1061,6 @@
       "lastKnownOnline": 1
     }
   },
-  "pending": [
-    {
-      "key": "2026-11-25T19:01:42.235Z:new:SMBPM157P121818512RC",
-      "kind": "new",
-      "product": {
-        "id": "SMBPM157P121818512RC",
-        "title": "MacBook Pro 15,7/M3 Pro(12-CPU 18-GPU)/18GB Ram/512GB SSD/16\"/SB/C(Arabic)",
-        "price": 1050,
-        "online": 1
-      }
-    }
-  ],
+  "pending": [],
   "lastAttemptAt": "2026-11-25T19:01:34.526Z"
 }
